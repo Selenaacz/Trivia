@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ES" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Quizzz</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="Quizzz">
+        <!--Ventana 1 Bienvenido-->
+        <div id="Bienvenido">
+            <h1 class="txt">¡BIENVENIDO AL JUEGO!</h1>
+            <h2 class="txt">¿Cual es tu nombre?</h2>
+            <input id="name" type="text" name="user" value="" placeholder="NOMBRE O APODO">
+            <button id="jugar" type="button" onclick="jugar()">JUGAR</button>
+            <hr>
+        </div>
+
+        <!--Ventana 2 Hola-->
+        <div id="Hello">
+            <h1 class="txt" id="hi">Hola,...</h1>
+            <h2 class="txt">Elige un tema</h2>
+            <button type="button" id="marvel" onclick="quizM()">FRIKI</button>
+            <button type="button" id="anime" onclick="quizA()">OTAKU</button>
+            <hr>
+        </div>
+
+        <!--Marvel pregunta 1-->
+        <div id="Marvel_P1">
+            <h1>¿Quien interpreta a Iron Man?</h1>
+            <img src="https://i.pinimg.com/originals/7b/5f/31/7b5f313a2d9497a7cdef4208bb70d032.gif" alt="theavengersironman_gif" width="500px">
+            <div id="M_p1">
+                <br>
+                <label><input type="radio" id="Mp1op1" name="Opcion" value="Mrp1">Chris Hemsworth</label>
+                <label><input type="radio" id="Mrp1.0" name="Opcion" value="Mrp01">Robert Downey Jr</label>
+                <label><input type="radio" id="Mp1op3" name="Opcion" value="Mrp1.">Mark Ruffalo</label>
+                <hr>
+                <div><button type="button" name="siguiente" id="p1Msig" onclick="marvelSiga2()">SIGUIENTE</button></div>
+            </div>
+
+        </div>
+
+
+        <!--Marvel pregunta 2-->
+        <div id="Marvel_P2">
+            <h1>¿Cual es el nombre del mapache?</h1>
+            <img src="https://media1.tenor.com/images/95ba345e678943615199e8726af64bf0/tenor.gif" alt="guardianesdelagalaxia" width="450px">
+            <div id="M_p2">
+                <br>
+                <label><input type="radio" id="Mp2op1" name="Opcion" value="Mrp2">Groot</label>
+                <label><input type="radio" id="Mrp2.0" name="Opcion" value="Mrp02">Rocket</label>
+                <label><input type="radio" id="Mp2op3" name="Opcion" value="Mrp2">Howad</label>
+                <hr>
+                <button type="button" name="siguiente" id="p2MSig" onclick="marvelSiga3()">SIGUIENTE</button>
+            </div>
+        </div>
+
+        <!--Marvel pregunta 3-->
+        <div id="Marvel_P3">
+            <h1>¿Como se llama el mejor amigo de Ant-Man?</h1>
+            <img src="https://thumbs.gfycat.com/FreshVainBactrian-mobile.mp4" alt="hombrehormiga" width="450px">
+            <div id="M_p3">
+                <br>
+                <label><input type="radio" id="Mp3op1" name="Opcion" value="Mrp3">Jim</label>
+                <label><input type="radio" id="Mp3op2" name="Opcion" value="Mrp3">Henry</label>
+                <label><input type="radio" id="Mrp3.0" name="Opcion" value="Mrp03">Luis</label>
+                <hr>
+                <button type="button" name="finalizar" id="marvelFinalizar" onclick="resultM()">Resultado</button>
+            </div>
+        </div>
+
+        <!--Anime pregunta 1-->
+        <div id="Anime_P1">
+            <h1>¿Quienes son los personajes principales del anime Dead Note?</h1>
+            <img src="https://data.whicdn.com/images/284996374/original.gif" alt="personaconalas" width="450px">
+            <div id="A_p1">
+                <br>
+                <label><input type="radio" id="Arp1.0" name="Opcion" value="Arp01">Ligh Yagami y L.</label>
+                <label><input type="radio" id="Ap1op2" name="Opcion" value="Arp1">Misa Amare y L.</label>
+                <label><input type="radio" id="Ap1op3" name="Opcion" value="Arp1">Near y Mellow</label>
+                <hr>
+                <button type="button" name="button" id="p1Asig" onclick="animeSiga2()">SIGUIENTE</button>
+            </div>
+        </div>
+
+        <!--Anime pregunta 2-->
+        <div id="Anime_P2">
+            <h1>¿Como se llama mejor amigo de Naruto?</h1>
+            <img src="https://i.pinimg.com/originals/7c/d3/77/7cd377ce6b927fd68d20125d70bdb016.gif" alt="comiendoramen" width="450px">
+            <div id="A_p2">
+                <br>
+                <label><input type="radio" id="Ap2op1" name="Opcion" value="Arp2">Sakura Haruno</label>
+                <label><input type="radio" id="Ap2op2" name="Opcion" value="Arp2">Hinata Hyuga</label>
+                <label><input type="radio" id="Arp2.0" name="Opcion" value="Arp02">Sasuke Uchina</label>
+                <hr>
+                <button type="button" name="button" id="p2Asig" onclick="animeSiga3()">SIGUIENTE</button>
+            </div>
+        </div>
+
+        <!--Anime pregunta 3-->
+        <div id="Anime_P3">
+            <h1>¿Cual es el apodo de Meliodas entre los 7 pecados capitales?</h1>
+            <img src="https://media1.tenor.com/images/ce378a1338d722f4f5b18c80d4874088/tenor.gif" alt="saludoepico" width="450px">
+            <div id="M_p3">
+                <br>
+                <label><input type="radio" id="Ap3op1" name="Opcion" value="Arp3">Demonio</label>
+                <label><input type="radio" id="Ap3op2" name="Opcion" value="Arp3">Jefe</label>
+                <label><input type="radio" id="Arp3.0" name="Opcion" value="Arp03">Capitan</label>
+                <hr>
+                <button type="button" name="finalizar" id="animeFinalizar" onclick="ResultA()">FINALIZAR</button>
+            </div>
+        </div>
+
+
+
+
+        <!--Ventana de Resultado-->
+        <div id="Vent_resultado">
+            <h1 id="nomRes">¡TU RESULTADO ES!</h1>
+            <p id="Correctas">Correctas...</p>
+            <p id="Incorrectas">Incorrectas...</p>
+            <br>
+            <h2>¿Quieres volver a intentarlo?</h2>
+            <button type="button" name="button" onclick="Volver()">SI</button>
+            <button type="button" name="button" onclick="Fin()">NO</button>
+            <hr>
+        </div>
+        <div id="graciasFin">
+            <hr>
+            <h1><strong>¡GRACIAS POR JUGAR!</strong></h1>
+            <button type="button" name="button" onclick="Inicio()">Inicio</button>
+            <hr>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="app.js"></script>
+
+</body>
+
+</html>

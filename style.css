@@ -1,0 +1,28 @@
+.Quizzz{
+  border: 7px solid white ;
+  border-radius: 20px;
+  background: rgba(238, 231, 228, 0.9);
+  text-align: center;
+
+}
+body{
+  margin: 12em;
+  background-image: url(https://www.guiltybit.com/wp-content/uploads/2020/01/DC-y-Marvel-vs-Dragon-Ball-la-%C3%89PICA-batalla-entre-h%C3%A9roes-de-distintos-universos.jpg);
+}
+h1{
+  color: red;
+}
+
+
+/*#Bienvenido{
+  text-align: center;
+}
+#Hello{
+  text-align: center;
+}
+#Vent_resultado{
+  text-align: center;
+}
+#Marvel_P1{
+  text-align: center;
+}*/
